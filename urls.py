@@ -1,11 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.conf import settings
-from mysite import views 
+import views 
 
 urlpatterns = patterns('',
 
     url(r'^index$', views.index, name= 'index'),
+    (r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^profile$', views.profile, name='profile'),
     url(r'^services$', views.services, name='service'),
     url(r'^contact$', views.contact, name='contact'),

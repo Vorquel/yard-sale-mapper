@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Log in</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<style>
+body{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+</style>
+</head>
+<body>
+	<header id="mast">
+  		<p align="right" >  <a> login  </a> <a> signup </a> </p> 
+    	<h1>Yardsale Addicts </h1>
+    </header>
+    <nav id="global">
+    	<ul>
+        	<li><a class="selected" href="index">Home</a></li>
+            <li><a href="profile">Profile</a></li>
+			<li><a href="services">Yardsale Mapper</a></li>
+			<li><a href="contact">Contact</a></li>
+			<li><a href="about">About</a></li>
+        </ul>
+    </nav>
+    <section id="intro">
+	{{ state }}
+	<form action="/login/" method="post">
+		{% if next %}
+		<input type="hidden" name="next" value="{{ next }}" />
+		{% endif %}
+		username:
+		<input type="text" name="username" value="{{ username}}" /><br />
+		password:
+		<input type="password" name="password" value="" /><br />
+
+		<input type="submit" value="Log In" />
+	</form>
+	</section>
+    <div id="main" class="clear">
+        <section id="articles">
+            <article class="blogPost">
+                
+        </section>
+    </div>
+    <footer>
+    	<div class="clear">
+            <section id="about">
+                <header>
+                    <h3>About</h3>
+                </header>
+                <p>The number of garage sales that occur in the Provo and Salt Lake areas is large.  Garage sale hoping has become a Saturday activity for some, especially newlyweds looking to furnish their first apartment.  While these individuals wish to furnish their apartment many lack the funds to just buy the items outright and the time to search KSL continuously for deals.   
+				<br>
+				Garage Sale Addict Solutions aims to help solve the headache of planning a route to garage sales in the local area.  It will offer the ability to choose from a selection of yard sales and find a fast, convenient route between them.</p>
+            </section>
+            <section>
+                <header>
+                    <h3>Recent Yardsales</h3>
+                </header>
+                <nav id="blogRoll">
+                    <ul>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <header>
+                    <h3>Site Map</h3>
+                </header>
+                <nav id="siteMap">
+                    <ul>
+						<li><a href="index">Home</a></li>
+						<li><a href="profile">Profile</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    	<li><a href="about">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
