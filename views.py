@@ -31,10 +31,6 @@ def login_user(request):
 
     return render_to_response('auth.html',{'state':state, 'username': username})
 
-def profile(request):
-    template = loader.get_template('profile.html')
-    return render(request, 'profile.html')
-
 def services(request):
     template = loader.get_template('services.html')
     return render(request, 'services.html')

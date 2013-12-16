@@ -6,11 +6,10 @@ import views
 urlpatterns = patterns('',
 
     url(r'^index$', views.index, name= 'index'),
-    (r'^login/$', 'django.contrib.auth.views.login'),
-    url(r'^profile$', views.profile, name='profile'),
     url(r'^services$', views.services, name='service'),
     url(r'^contact$', views.contact, name='contact'),
     url(r'^about$', views.about, name='about'),
+
     
 
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
